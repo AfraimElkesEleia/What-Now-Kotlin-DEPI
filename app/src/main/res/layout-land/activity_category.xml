@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/general_cv"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@id/entertainment_cv"
+        app:layout_constraintStart_toStartOf="@+id/sports_cv"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/general" />
+
+        <TextView
+            style="@style/explore_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="General"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sports_cv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/technology_cv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_cv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sports" />
+
+        <TextView
+            style="@style/explore_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sports"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/technology_cv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+
+        app:layout_constraintEnd_toStartOf="@id/business_cv"
+        app:layout_constraintStart_toEndOf="@+id/sports_cv"
+        app:layout_constraintTop_toTopOf="@+id/sports_cv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/technology" />
+
+        <TextView
+            style="@style/explore_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Technology"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/business_cv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/entertainment_cv"
+        app:layout_constraintStart_toEndOf="@id/technology_cv"
+        app:layout_constraintTop_toTopOf="@+id/technology_cv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bussiness" />
+
+        <TextView
+            style="@style/explore_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Business"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/entertainment_cv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/business_cv"
+        app:layout_constraintTop_toTopOf="@+id/technology_cv"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/entertainment" />
+
+        <TextView
+            style="@style/explore_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="entertainment"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

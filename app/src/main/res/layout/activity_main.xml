@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_main"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/news_app"
+        app:layout_constraintBottom_toTopOf="@+id/text_hello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/text_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/adlam_displa"
+        android:text=" Hello "
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_main" />
+
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome to What Now, where you can explore the latest news across all your favorite categories, anytime, anywhere."
+        android:textAlignment="center"
+        android:textColor="#656565"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_hello"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:padding="16dp"
+        android:text="Login"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description" />
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        android:text="Sign Up"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <View
+        android:id="@+id/dividerleft"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:alpha="0.5"
+        android:background="#5A5A5A"
+        app:layout_constraintEnd_toStartOf="@id/or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_signUp"
+
+        />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="OR"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/dividerleft"
+        app:layout_constraintEnd_toStartOf="@id/dividerRight"
+        app:layout_constraintStart_toEndOf="@id/dividerleft"
+        app:layout_constraintTop_toTopOf="@id/dividerleft"
+
+        />
+
+    <View
+        android:id="@+id/dividerRight"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:alpha="0.5"
+        android:background="#5A5A5A"
+        app:layout_constraintBottom_toBottomOf="@id/dividerleft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/or"
+        app:layout_constraintTop_toTopOf="@id/dividerleft"
+
+        />
+    <Button
+        android:id="@+id/FABG"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        android:text="Sign up with Google"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:textColor="#393957"
+        android:textAllCaps="false"
+        android:background="@drawable/button_google_style"
+        android:layout_marginTop="32dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/FABG"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="16dp"
+         android:scaleType="fitCenter"
+         android:src="@drawable/google"
+         app:layout_constraintEnd_toStartOf="@id/FABF"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/or"
+         app:useCompatPadding="false" />
+     -->
+
+<!--
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FABF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FABG"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        app:layout_constraintTop_toTopOf="@id/FABG" />
+-->
+</androidx.constraintlayout.motion.widget.MotionLayout>
